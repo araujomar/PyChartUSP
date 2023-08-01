@@ -13,7 +13,7 @@ classe = "GRAN"
 
 def read_save(save_path, main_path, chart_name="GRAN_chart", file_type="TXT"):
     paths = glob.glob(f"{main_path}\\*.{file_type}")
-    columns=["Sample", "Tamanho de partícula (mm)", "Normal", "Logarítimica"]
+    columns=["Sample", "Tamanho de partícula (μm)", "Normal", "Logarítimica"]
     df = pd.DataFrame()    
     for f in paths:
         filename = f.split("\\")[-1].split(".")[0]

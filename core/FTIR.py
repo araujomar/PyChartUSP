@@ -15,7 +15,7 @@ classe = "FTIR"
 
 def read_save(save_path, main_path, chart_name="FTIR_chart", file_type="CSV"):
     paths = glob.glob(f"{main_path}\\*.{file_type}")
-    columns=["Sample", "Wavenumber (cm)", "Intensity (a.u.)"]
+    columns=["Sample", "Wavenumber (cm^-1)", "Intensity (a.u.)"]
     dfd = pd.DataFrame(columns=columns)    
     for f in paths:
         filename = f.split("\\")[-1].split(".")[0]
@@ -34,7 +34,7 @@ def read_save(save_path, main_path, chart_name="FTIR_chart", file_type="CSV"):
     ################SAVING CHARTS
     fig, ax = plt.subplots()    
     figsize = (10.72,8.205)
-    x_max = 2000
+    x_max = 1800
     x_min = 450
     per = 200
     
